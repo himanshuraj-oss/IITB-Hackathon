@@ -196,8 +196,8 @@ const Waves = ({
         mouse = mouseRef.current,
         noise = noiseRef.current;
       const { waveSpeedX, waveSpeedY, waveAmpX, waveAmpY, friction, tension, maxCursorMove } = configRef.current;
-      lines.forEach(pts => {
-        pts.forEach(p => {
+      lines.forEach((pts: any) => {
+        pts.forEach((p: any) => {
           const move = noise.perlin2((p.x + time * waveSpeedX) * 0.002, (p.y + time * waveSpeedY) * 0.0015) * 12;
           p.wave.x = Math.cos(move) * waveAmpX;
           p.wave.y = Math.sin(move) * waveAmpY;
@@ -238,7 +238,7 @@ const Waves = ({
       ctx.clearRect(0, 0, width, height);
       ctx.beginPath();
       ctx.strokeStyle = configRef.current.lineColor;
-      linesRef.current.forEach(points => {
+      linesRef.current.forEach((points: any) => {
         let p1 = moved(points[0], false);
         ctx.moveTo(p1.x, p1.y);
         points.forEach((p: any, idx: number) => {

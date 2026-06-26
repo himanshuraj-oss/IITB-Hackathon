@@ -62,7 +62,7 @@ export default function FeatureShowcase() {
           Mobile: flex-col (accordion)
         */}
         <div className="flex flex-col md:grid md:grid-cols-4 md:auto-rows-[1fr] gap-4 min-h-[300px]">
-          {features.map((feature) => {
+          {features.map((feature: any) => {
             const isActive = activeIndex === feature.id;
             
             return (

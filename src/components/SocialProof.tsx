@@ -59,7 +59,7 @@ export default function SocialProof() {
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 w-full mb-20 border-y border-white/10 py-12">
-          {stats.map((stat, i) => (
+          {stats.map((stat: any, i: number) => (
             <div key={i} className="flex flex-col items-center text-center">
               <span className="text-4xl md:text-5xl font-mono font-bold text-deep-saffron mb-2 tracking-tight">{stat.value}</span>
               <span className="text-sm font-sans font-medium text-arctic-powder/70 uppercase tracking-widest">{stat.label}</span>
@@ -87,7 +87,7 @@ export default function SocialProof() {
             <div className="flex-1 relative z-10">
               <div className="flex items-center gap-2 mb-6">
                  {/* 5 stars */}
-                 {[1,2,3,4,5].map(i => (
+                 {[1,2,3,4,5].map((i: number) => (
                     <Image key={i} src="/assets/cube-16-solid.svg" alt="star" width={14} height={14} className="opacity-100" style={{ filter: 'brightness(0) saturate(100%) invert(75%) sepia(45%) saturate(5427%) hue-rotate(352deg) brightness(101%) contrast(105%)' }} />
                  ))}
               </div>

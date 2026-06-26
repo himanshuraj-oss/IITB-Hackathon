@@ -55,10 +55,10 @@ export default function PricingSection() {
     if (enterpriseSuffixRef.current) enterpriseSuffixRef.current.textContent = suffix;
 
     if (containerRef.current) {
-      containerRef.current.querySelectorAll('.currency-symbol').forEach(el => {
+      containerRef.current.querySelectorAll('.currency-symbol').forEach((el: any) => {
         el.textContent = tariff.symbol;
       });
-      containerRef.current.querySelectorAll('.currency-btn').forEach(btn => {
+      containerRef.current.querySelectorAll('.currency-btn').forEach((btn: any) => {
         const btnCurr = btn.getAttribute('data-curr');
         if (btnCurr === curr) {
           btn.className = `currency-btn px-3 py-1 font-mono text-xs rounded-md transition-all duration-200 bg-deep-saffron text-oceanic-noir font-bold shadow-[0_0_10px_rgba(255,153,50,0.5)]`;

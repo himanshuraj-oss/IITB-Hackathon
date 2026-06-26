@@ -36,7 +36,7 @@ export const StaggeredMenu = ({
   const activeAnimationsRef = useRef<Animation[]>([]);
 
   const cancelAnimations = () => {
-    activeAnimationsRef.current.forEach(a => {
+    activeAnimationsRef.current.forEach((a: any) => {
       try { a.cancel(); } catch(e) {}
     });
     activeAnimationsRef.current = [];
@@ -97,8 +97,8 @@ export const StaggeredMenu = ({
     
     const itemsStart = panelDelay + 650 * 0.15;
     
-    itemEls.forEach(el => { el.style.transform = 'translateY(140%) rotate(10deg)'; });
-    numberEls.forEach(el => { el.style.setProperty('--sm-num-opacity', '0'); });
+    itemEls.forEach((el: any) => { el.style.transform = 'translateY(140%) rotate(10deg)'; });
+    numberEls.forEach((el: any) => { el.style.setProperty('--sm-num-opacity', '0'); });
     
     itemEls.forEach((el, i) => {
       const delay = itemsStart + i * 100;
@@ -154,7 +154,7 @@ export const StaggeredMenu = ({
     
     const all = [...layers, panel] as HTMLElement[];
     
-    all.forEach(el => {
+    all.forEach((el: any) => {
       const anim = el.animate(
         [{ transform: 'translateX(0%)' }, { transform: `translateX(${offscreen})` }],
         { duration: 320, easing: 'cubic-bezier(0.5, 0, 0.1, 1)', fill: 'forwards' }
@@ -291,7 +291,7 @@ export const StaggeredMenu = ({
         >
           <span ref={textWrapRef} className="sm-toggle-textWrap" aria-hidden="true">
             <span ref={textInnerRef} className="sm-toggle-textInner">
-              {textLines.map((l, i) => (
+              {textLines.map((l: string, i: number) => (
                 <span className="sm-toggle-line" key={i}>
                   {l}
                 </span>
@@ -309,7 +309,7 @@ export const StaggeredMenu = ({
         <div className="sm-panel-inner">
           <ul className="sm-panel-list" role="list" data-numbering={displayItemNumbering || undefined}>
             {items && items.length ? (
-              items.map((it, idx) => (
+              items.map((it: any, idx: number) => (
                 <li className="sm-panel-itemWrap" key={it.label + idx}>
                   <a className="sm-panel-item text-black" href={it.link} aria-label={it.ariaLabel} data-index={idx + 1}>
                     <span className="sm-panel-itemLabel">{it.label}</span>
@@ -328,7 +328,7 @@ export const StaggeredMenu = ({
             <div className="sm-socials" aria-label="Social links">
               <h3 className="sm-socials-title text-[#5227FF]">Socials</h3>
               <ul className="sm-socials-list" role="list">
-                {socialItems.map((s, i) => (
+                {socialItems.map((s: any, i: number) => (
                   <li key={s.label + i} className="sm-socials-item">
                     <a href={s.link} target="_blank" rel="noopener noreferrer" className="sm-socials-link text-black">
                       {s.label}

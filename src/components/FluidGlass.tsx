@@ -205,8 +205,6 @@ function NavItems({ items }: any) {
           outlineBlur="20%"
           outlineColor="#000"
           outlineOpacity={0.5}
-          depthTest={false}
-          renderOrder={10}
           onClick={e => {
             e.stopPropagation();
             handleNavigate(link);
