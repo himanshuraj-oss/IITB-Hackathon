@@ -201,7 +201,6 @@ function NavItems({ items }: any) {
           color="white"
           anchorX="center"
           anchorY="middle"
-          depthWrite={false}
           outlineWidth={0}
           outlineBlur="20%"
           outlineColor="#000"
