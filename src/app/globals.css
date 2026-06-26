@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --color-arctic-powder: #F1F6F4;
+  --color-mystic-mint: #D9E8E2;
+  --color-forsythia: #FFC801;
+  --color-deep-saffron: #FF9932;
+  --color-nocturnal-expedition: #114C5A;
+  --color-oceanic-noir: #172B36;
+  
+  --background: var(--color-oceanic-noir);
+  --foreground: var(--color-arctic-powder);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-arctic-powder: var(--color-arctic-powder);
+  --color-mystic-mint: var(--color-mystic-mint);
+  --color-forsythia: var(--color-forsythia);
+  --color-deep-saffron: var(--color-deep-saffron);
+  --color-nocturnal-expedition: var(--color-nocturnal-expedition);
+  --color-oceanic-noir: var(--color-oceanic-noir);
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
